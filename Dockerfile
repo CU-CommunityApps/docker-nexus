@@ -7,8 +7,8 @@ FROM docker.cucloud.net/java
 MAINTAINER Shawn Bower
 
 RUN cd /usr/local && \
-    wget -qO- http://download.sonatype.com/nexus/oss/nexus-2.10.0-02-bundle.tar.gz | tar xz && \
-    ln -s nexus-2.10.0-02 nexus && \
+    wget -qO- http://download.sonatype.com/nexus/oss/nexus-2.11.2-03-bundle.tar.gz | tar xz && \
+    ln -s nexus-2.11.2-03 nexus && \
     rm -rf /usr/local/sonatype-work/nexus && \
     ln -s /nexus /usr/local/sonatype-work/nexus
 
