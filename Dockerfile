@@ -1,7 +1,7 @@
 # Nexus deploy
 
 # Pull base image.
-FROM docker.cucloud.net/java
+FROM dtr.cucloud.net/cs/java
 
 # File Author / Maintainer
 MAINTAINER Shawn Bower
