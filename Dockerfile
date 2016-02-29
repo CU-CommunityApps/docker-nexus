@@ -6,9 +6,11 @@ FROM dtr.cucloud.net/cs/java
 # File Author / Maintainer
 MAINTAINER Shawn Bower
 
+ENV VERSION 2.12.0-01
+
 RUN cd /usr/local && \
-    wget -qO- http://download.sonatype.com/nexus/oss/nexus-2.11.2-03-bundle.tar.gz | tar xz && \
-    ln -s nexus-2.11.2-03 nexus && \
+    wget -qO- http://download.sonatype.com/nexus/oss/nexus-${VERSION}-bundle.tar.gz | tar xz && \
+    ln -s nexus-${VERSION} nexus && \
     rm -rf /usr/local/sonatype-work/nexus && \
     ln -s /nexus /usr/local/sonatype-work/nexus
 
