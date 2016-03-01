@@ -12,7 +12,9 @@ RUN cd /usr/local && \
     wget -qO- http://download.sonatype.com/nexus/oss/nexus-${VERSION}-bundle.tar.gz | tar xz && \
     ln -s nexus-${VERSION} nexus && \
     rm -rf /usr/local/sonatype-work/nexus && \
-    ln -s /nexus /usr/local/sonatype-work/nexus
+    ln -s /nexus /usr/local/sonatype-work/nexus && \
+    rm -rf /usr/local/nexus/tmp && \
+    ln -s /nexus/tmp/ /usr/local/nexus/tmp
 
 VOLUME /nexus
 
